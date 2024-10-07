@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космический Кликер</title>
+    <style>
+        body {
+            background-color: #000000; /* Темный фон космоса */
+            color: #ffffff; /* Белый текст */
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        #coin {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://cdn1.vectorstock.com/i/1000x1000/23/10/paw-footprint-gold-coin-vector-19272310.jpg'); /* Замените на ссылку на изображение монеты */
+            background-size: cover;
+            cursor: pointer;
+            margin: 50px auto; /* Выравнивание по центру */
+        }
+
+        #coinsCount {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>PAW COINS</h1>
+
+<div id="coin"></div>
+
+<div id="coinsCount">0 монет</div>
+
+<script>
+    let coins = 0;
+
+    document.getElementById('coin').addEventListener('click', function() {
+        coins++;
+        document.getElementById('coinsCount').textContent = coins + ' монет';
+    });
+</script>
+
+</body>
+</html>
